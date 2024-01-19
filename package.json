@@ -10,8 +10,18 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@morev/vue-transitions": "^2.3.6",
+    "autoprefixer": "^10.4.17",
     "nuxt": "^3.9.3",
+    "nuxt-headlessui": "^1.1.5",
+    "nuxt-icon": "^0.6.8",
+    "postcss": "^8.4.33",
+    "tailwind-scrollbar": "^3.0.5",
+    "tailwindcss": "^3.4.1",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@vueuse/nuxt": "^10.7.2"
   }
 }
