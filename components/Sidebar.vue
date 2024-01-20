@@ -4,13 +4,13 @@
         <SidebarItem/>
       <div class="mt-auto">
         <HDisclosure v-slot="{open}">
-          <HDisclosureButton class="inline-flex items-center justify-between gap-4 px-4 py-3 text-left text-[15px]">
+          <HDisclosureButton class="w-full hover:bg-accent inline-flex items-center justify-between gap-4 px-4 py-3 text-left text-[15px]">
             <div class="flex items-center gap-4">
               <Icon name="heroicons:cog-8-tooth" class="w-5 h-5 text-muted-foreground"/>
               <span class="truncate">Settings</span>
             </div>
             <div>
-              <Icon :class="[open && 'rotate-180']" name="heroicons:chevron-up" class="w-5 h-5 text-muted-foreground transition"/>
+              <Icon :class="[open && 'rotate-180']" name="heroicons:chevron-down" class="w-5 h-5 text-muted-foreground transition"/>
             </div>
           </HDisclosureButton>
           <TransitionExpand>

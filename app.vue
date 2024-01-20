@@ -8,11 +8,11 @@
     <Sidebar class="hidden lg:col-span-3 lg:block" />
     <!--Main-->
 
-    <main>
+    <main class="py-5 lg:col-span-8">
       <!--Status cards -->
-
-      <!--Customer list-->
-
+      <StatusCard/>
+      <!--Period list-->
+      <PeriodCard/>
       <!--Sales charts -->
 
       <!--Recent orders -->
