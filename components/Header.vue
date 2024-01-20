@@ -19,31 +19,32 @@
         </button>
 
         <HMenu as="div" class="relative">
-
           <HMenuButton class="flex h-9 w-9 shrink-0 items-center overflow-hidden justify-center rounded-full border bg-background">
               <img src="https://randomuser.me/api/portraits/med/men/34.jpg" class="w-full h-full" alt="Random User Image" />
           </HMenuButton>
-
-          <HMenuItems class="absolute right-0 z-10 mt-3 w-48 rounded-md border bg-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-            <div class="border-b px-3 py-1.5 text-sm">
-              <p class="font-semibold">Hello John Doe</p>
-              <a href="mailto:john@example.com" class="text-muted-foreground leading-none">
-                 johndoe@example.com
-              </a>
-            </div>
-            <div class="p-1">
+          <TransitionScale :scale="0.8" origin="top right">
+            <HMenuItems class="absolute right-0 z-10 mt-3 w-48 rounded-md border bg-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+              <div class="border-b px-3 py-1.5 text-sm">
+                <p class="font-semibold">Hello John Doe</p>
+                <a href="mailto:john@example.com" class="text-muted-foreground leading-none">
+                  johndoe@example.com
+                </a>
+              </div>
+              <div class="p-1">
                 <template v-for="(profile, i) in profileMenuOptions" :key="i">
-                    <HMenuItem v-if="!profile.divider" v-slot="{ active }">
-                      <NuxtLink :to="profile.url"
-                                :class="[active && 'bg-muted']"
-                                class="inline-flex w-full items-center rounded-md p-2 text-sm font-medium">
-                        {{ profile.title }}
-                      </NuxtLink>
-                    </HMenuItem>
+                  <HMenuItem v-if="!profile.divider" v-slot="{ active }">
+                    <NuxtLink :to="profile.url"
+                              :class="[active && 'bg-muted']"
+                              class="inline-flex w-full items-center rounded-md p-2 text-sm font-medium">
+                      {{ profile.title }}
+                    </NuxtLink>
+                  </HMenuItem>
                   <hr v-if="profile.divider" class="my-1">
                 </template>
-            </div>
-          </HMenuItems>
+              </div>
+            </HMenuItems>
+
+          </TransitionScale>
 
         </HMenu>
 
@@ -67,8 +68,6 @@ const profileMenuOptions = [
   {title: "Billing", url: "/billing"},
   {title: "Settings", url: "/settings"},
   {title: "Team Members", url: "/team-members"},
-  {title: "Sales", url: "/sales"},
-  {title: "Support", url: "/support"},
   {divider: true},
   {title: "Sign Out", url: "/sign-out"},
 
