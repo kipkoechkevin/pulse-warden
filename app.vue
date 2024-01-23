@@ -9,6 +9,8 @@
     <!--Main-->
 
     <main class="py-5 lg:col-span-8">
+
+      <AddMonitor/>
       <!--Status cards -->
       <StatusCard/>
       <!--Period list-->

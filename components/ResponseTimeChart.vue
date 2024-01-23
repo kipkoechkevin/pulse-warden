@@ -2,7 +2,7 @@
   <div class="mt-6">
     <h3 class="text-gray-500 text-xs font-bold uppercase tracking-wide">Response Time</h3>
       <div class="mt-5 h-300 rounded-lg bg-background md:p-3">
-
+          <Line :data="data" :options="options" />
       </div>
   </div>
 </template>
@@ -64,7 +64,7 @@
         },
         y: {
           grid: {
-            color: mode.value === 'dark' ? colors.dark[200] : colors.gray[500],
+            color: mode.value === 'dark' ? colors.slate[900] : colors.slate[200],
             borderDash: [3, 3],
             drawBorder: false,
             drawTicks: false,
@@ -73,7 +73,7 @@
             zeroLineBorderDashOffset: 6,
           },
           ticks: {
-            color: mode.value === 'dark' ? colors.dark[200] : colors.gray[500],
+            color: {color: colors.slate[500]},
             font: {
               size: 14,
               family: 'Inter',
